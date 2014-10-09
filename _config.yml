@@ -1,0 +1,10 @@
+# Site wide configuration
+title:            Joaquin Sargiotto
+locale:           en_US
+url:              http://localhost:4000
+
+
+# Jekyll configuration
+permalink:   /:categories/:title/
+markdown:    kramdown
+highlighter: pygments
