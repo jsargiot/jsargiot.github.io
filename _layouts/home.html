@@ -4,13 +4,23 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Joaquin</title>
+    <link rel="stylesheet" href="{{ site.url }}/assets/css/style.css">
+    <link href="http://fonts.googleapis.com/css?family=Roboto+Condensed:300,700" rel="stylesheet" type="text/css">
 </head>
 <body>
     {% include _header.html %}
 
-    <h1>{{ page.title }}</h1>
-    <div>
+    <section class="row">
         {{ content }}
-    </div>
+    </section>
+
+    <section class="row">
+        {% for post in site.posts %}
+        <article>
+            <h2><a href="{{ post.url }}">{{ post.title }}</a></h2>
+            {{ post.excerpt }}
+        </article>
+        {% endfor %}
+    </section>
 </body>
 </html>
